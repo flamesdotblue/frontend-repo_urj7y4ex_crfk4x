@@ -1,79 +1,68 @@
+import Spline from "@splinetool/react-spline";
 import { Rocket, Search, CreditCard, Package } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 pointer-events-none" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white px-3 py-1 text-xs text-indigo-700 shadow-sm">
-              <Rocket size={14} /> Built for garages, tuned for speed
-            </div>
-            <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
-              Order auto parts in minutes. We handle the rest.
-            </h1>
-            <p className="mt-4 text-gray-600 text-lg leading-relaxed">
-              Mechzo connects garages, partner stores, and delivery agents in one streamlined flow—so parts arrive fast, accurate, and fully tracked.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <button className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-indigo-600 text-white hover:bg-indigo-500 transition-colors shadow">
-                Get Started
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">
-                View Live Flow
-              </button>
-            </div>
-            <dl className="mt-10 grid grid-cols-2 gap-6 max-w-md">
-              <div className="flex items-start gap-3">
-                <div className="h-9 w-9 rounded-md bg-indigo-600 text-white flex items-center justify-center">
-                  <Search size={18} />
-                </div>
-                <div>
-                  <dt className="font-medium text-gray-900">Smart search</dt>
-                  <dd className="text-sm text-gray-600">VIN, category, brand filters</dd>
-                </div>
+    <section className="relative">
+      <div className="relative h-[560px] sm:h-[640px] w-full overflow-hidden">
+        <Spline
+          scene="https://prod.spline.design/4Tf9WOIaWs6LOezG/scene.splinecode"
+          style={{ width: "100%", height: "100%" }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0B1220]/60 via-[#0B1220]/40 to-white/0" />
+      </div>
+
+      <div className="absolute inset-0 flex items-center">
+        <div className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-orange-300/50 bg-white/20 px-3 py-1 text-xs text-orange-100 shadow-sm backdrop-blur">
+                <Rocket size={14} /> Built for garages, tuned for speed
               </div>
-              <div className="flex items-start gap-3">
-                <div className="h-9 w-9 rounded-md bg-indigo-600 text-white flex items-center justify-center">
-                  <CreditCard size={18} />
-                </div>
-                <div>
-                  <dt className="font-medium text-gray-900">In‑app payments</dt>
-                  <dd className="text-sm text-gray-600">Instant confirmation</dd>
-                </div>
+              <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow">
+                Mechzo — Parts at the speed of need.
+              </h1>
+              <p className="mt-4 text-white/90 text-lg leading-relaxed">
+                Connect with your local partner store, pay in‑app, and track delivery live. One platform for garages, stores, and delivery agents.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <button className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-[#0B5ED7] text-white hover:bg-[#0A4FB4] transition-colors shadow">
+                  Get the App
+                </button>
+                <a href="#flow" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-white/40 text-white hover:bg-white/10 backdrop-blur">
+                  View Operational Flow
+                </a>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="h-9 w-9 rounded-md bg-indigo-600 text-white flex items-center justify-center">
-                  <Package size={18} />
+
+              <dl className="mt-10 grid grid-cols-2 gap-6 max-w-md">
+                <div className="flex items-start gap-3">
+                  <div className="h-9 w-9 rounded-md bg-[#0B5ED7] text-white flex items-center justify-center">
+                    <Search size={18} />
+                  </div>
+                  <div>
+                    <dt className="font-medium text-white">Smart search</dt>
+                    <dd className="text-sm text-white/80">VIN, category, brand filters</dd>
+                  </div>
                 </div>
-                <div>
-                  <dt className="font-medium text-gray-900">Inventory synced</dt>
-                  <dd className="text-sm text-gray-600">Real‑time availability</dd>
+                <div className="flex items-start gap-3">
+                  <div className="h-9 w-9 rounded-md bg-orange-500 text-white flex items-center justify-center">
+                    <CreditCard size={18} />
+                  </div>
+                  <div>
+                    <dt className="font-medium text-white">In‑app payments</dt>
+                    <dd className="text-sm text-white/80">Razorpay / UPI</dd>
+                  </div>
                 </div>
-              </div>
-            </dl>
-          </div>
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl border border-gray-200 bg-white shadow-lg p-6">
-              <div className="grid grid-cols-2 gap-4 h-full">
-                <div className="rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-50 border border-indigo-200 p-4">
-                  <p className="text-sm font-semibold text-indigo-800">Garage Owner</p>
-                  <p className="mt-2 text-sm text-indigo-900/80">Search → Order → Pay</p>
+                <div className="flex items-start gap-3">
+                  <div className="h-9 w-9 rounded-md bg-[#0B5ED7] text-white flex items-center justify-center">
+                    <Package size={18} />
+                  </div>
+                  <div>
+                    <dt className="font-medium text-white">Inventory synced</dt>
+                    <dd className="text-sm text-white/80">Real‑time availability</dd>
+                  </div>
                 </div>
-                <div className="rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-50 border border-emerald-200 p-4">
-                  <p className="text-sm font-semibold text-emerald-800">Partner Store</p>
-                  <p className="mt-2 text-sm text-emerald-900/80">Pick → Pack → Handover</p>
-                </div>
-                <div className="rounded-xl bg-gradient-to-br from-amber-100 to-amber-50 border border-amber-200 p-4">
-                  <p className="text-sm font-semibold text-amber-800">Delivery Agent</p>
-                  <p className="mt-2 text-sm text-amber-900/80">Pickup → Deliver → Update</p>
-                </div>
-                <div className="rounded-xl bg-gradient-to-br from-fuchsia-100 to-fuchsia-50 border border-fuchsia-200 p-4">
-                  <p className="text-sm font-semibold text-fuchsia-800">Admin</p>
-                  <p className="mt-2 text-sm text-fuchsia-900/80">Listings → Orders → Payouts</p>
-                </div>
-              </div>
+              </dl>
             </div>
           </div>
         </div>
